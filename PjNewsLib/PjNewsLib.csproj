@@ -107,8 +107,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="News.cs" />
     <Compile Include="NewsGrabber.cs" />
-    <Compile Include="NewsObject.cs" />
+    <Compile Include="Article.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\PjNewsLib.rd.xml" />
   </ItemGroup>

@@ -26,5 +26,20 @@ namespace PjNewsLib
         public string connectorGuid { get; set; }
         public string pageUrl { get; set; }
         public IList<OutputProperty> outputProperties { get; set; }
+
+
+        public string GetAllNewsTitlesString()
+        {
+            string result = "";
+
+            foreach (var rez in results)
+            {
+                result = result + rez.link_title + "\n";
+            }
+
+            return result;
+        }
     }
+
+
 }
