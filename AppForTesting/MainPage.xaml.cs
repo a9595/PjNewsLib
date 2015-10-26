@@ -37,9 +37,9 @@ namespace AppForTesting
             image.Source = new BitmapImage(new Uri(article.GetHeaderImageUrl(), UriKind.Absolute));
         }
 
-        public void Connect(int connectionId, object target)
-        {
-            throw new NotImplementedException();
-        }
+//        public void Connect(int connectionId, object target)
+//        {
+//            throw new NotImplementedException();
+//        }
     }
 }

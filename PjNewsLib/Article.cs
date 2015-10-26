@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace PjNewsLib
 {
-    public class NewsObject
+    public class Article
     {
         public int offset { get; set; }
         public IList<Result> results { get; set; }
