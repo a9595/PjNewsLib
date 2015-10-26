@@ -11,7 +11,7 @@ namespace PjNewsLib
     public class Article
     {
         public int offset { get; set; }
-        public IList<Result> results { get; set; }
+        public IList<ArticleResult> results { get; set; }
         public IList<string> cookies { get; set; }
         public string connectorVersionGuid { get; set; }
         public string connectorGuid { get; set; }
@@ -61,7 +61,7 @@ namespace PjNewsLib
         }
     }
 
-    public class Result
+    public class ArticleResult
     {
         //public string header_img_alt { get; set; }
         public string header_img { get; set; }
