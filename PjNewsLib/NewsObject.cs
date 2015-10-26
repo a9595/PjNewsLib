@@ -50,10 +50,15 @@ namespace PjNewsLib
             var bitmap = new BitmapImage();
             bitmap.SetSource(ims);
 
+            getHeaderImageUrl();
+
             return bitmap;
         }
 
-
+        public string getHeaderImageUrl()
+        {
+            return results.First().header_img;
+        }
     }
 
     public class Result
