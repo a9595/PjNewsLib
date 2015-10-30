@@ -34,12 +34,20 @@ namespace AppForTesting
             var news = NewsGrabber.GetNews();
 
 
-            textBlockTitle.Text = article.GetTitle();
-            textBlockContent.Text = article.GetContent();
-            image.Source = new BitmapImage(new Uri(article.GetHeaderImageUrl(), UriKind.Absolute));
-            textBlockLinks.Text = news.GetAllNewsTitlesString();
+            //textBlockTitle.Text = article.GetTitle();
+            //textBlockContent.Text = article.GetContent();
+            //image.Source = new BitmapImage(new Uri(article.GetHeaderImageUrl(), UriKind.Absolute));
+            //textBlockLinks.Text = news.GetAllNewsTitlesString();
+
+
+            //viewModel test
+            ViewModel viewModel = new ViewModel();
+            textBlockViewModel.Text = viewModel.News.GetAllNewsTitlesString();
+
+
         }
 
+        public ViewModel ViewModel { get; set; }    
 //        public void Connect(int connectionId, object target)
 //        {
 //            throw new NotImplementedException();
