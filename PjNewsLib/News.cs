@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Windows.Devices.Bluetooth.Advertisement;
 using Newtonsoft.Json;
 
@@ -24,6 +25,10 @@ namespace PjNewsLib
 
         public Article ArticleItem { get; set; }
 
+        public override string ToString()
+        {
+            return Date + "  " + LinkText;
+        }
     }
 
     public class OutputProperty
@@ -43,7 +48,7 @@ namespace PjNewsLib
         public int Offset { get; set; }
 
         [JsonProperty("results")]
-        public IList<Result> Results { get; set; }
+        public ObservableCollection<Result> Results { get; set; }
 
         [JsonProperty("cookies")]
         public IList<string> Cookies { get; set; }

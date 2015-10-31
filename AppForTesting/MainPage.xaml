@@ -15,5 +15,8 @@
         <TextBlock x:Name="textBlockLinks" TextWrapping="Wrap" Text="links" Margin="0,30,0,0"/>
         <TextBlock x:Name="textBlockViewModel" TextWrapping="Wrap" Text="links" Margin="0,30,0,0"/>
 
+        <ListView ItemsSource="{x:Bind ViewModelItem.News.Results}"
+                  HorizontalAlignment="Center" VerticalAlignment="Center"
+                  />
     </StackPanel>
 </Page>
