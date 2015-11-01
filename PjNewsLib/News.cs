@@ -7,6 +7,9 @@ namespace PjNewsLib
 {
     public class NewsResult
     {
+        public NewsResult()
+        {
+        }
 
         [JsonProperty("date")]
         public string Date { get; set; }
@@ -43,6 +46,9 @@ namespace PjNewsLib
 
     public class News
     {
+        public News()
+        {
+        }
 
         [JsonProperty("offset")]
         public int Offset { get; set; }

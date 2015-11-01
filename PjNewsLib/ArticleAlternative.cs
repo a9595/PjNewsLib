@@ -12,6 +12,9 @@ namespace PjNewsLib
 {
     public class Result
     {
+        public Result()
+        {
+        }
 
         [JsonProperty("header_img/_alt")]
         public string HeaderImgAlt { get; set; }
@@ -25,12 +28,18 @@ namespace PjNewsLib
         [JsonProperty("title")]
         public string Title { get; set; }
 
+        //[JsonProperty("content")]
+        //public IList<string> Content { get; set; }
+
         [JsonProperty("content")]
-        public IList<string> Content { get; set; }
+        public string Content { get; set; }
     }
 
     public class OutputPropertyAlternative
     {
+        public OutputPropertyAlternative()
+        {
+        }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -41,9 +50,15 @@ namespace PjNewsLib
 
     public class ArticleAlternative
     {
+        public ArticleAlternative()
+        {
+        }
 
         [JsonProperty("offset")]
         public int Offset { get; set; }
+
+        //[JsonProperty("results")]
+        //public Result Results { get; set; }
 
         [JsonProperty("results")]
         public IList<Result> Results { get; set; }
@@ -69,7 +84,10 @@ namespace PjNewsLib
 
         public string GetTitle()
         {
+            //return Results.Title;
+
             return Results.First().Title;
+
         }
 
         public string GetContent()
@@ -85,6 +103,9 @@ namespace PjNewsLib
             }
 
             return allContent;
+
+
+
         }
 
         public async Task<BitmapImage> GetHeaderImage()
