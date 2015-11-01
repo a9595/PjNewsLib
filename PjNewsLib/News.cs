@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace PjNewsLib
 {
-    public class Result
+    public class NewsResult
     {
 
         [JsonProperty("date")]
@@ -23,7 +23,7 @@ namespace PjNewsLib
         [JsonProperty("link/_title")]
         public string LinkTitle { get; set; }
 
-        public Article ArticleItem { get; set; }
+        public ArticleAlternative ArticleItem { get; set; }
 
         public override string ToString()
         {
@@ -48,7 +48,7 @@ namespace PjNewsLib
         public int Offset { get; set; }
 
         [JsonProperty("results")]
-        public ObservableCollection<Result> Results { get; set; }
+        public IList<NewsResult> Results { get; set; }
 
         [JsonProperty("cookies")]
         public IList<string> Cookies { get; set; }
@@ -77,7 +77,7 @@ namespace PjNewsLib
             return result;
         }
 
-       
+
     }
 
 

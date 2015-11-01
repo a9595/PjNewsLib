@@ -107,6 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleAlternative.cs" />
     <Compile Include="News.cs" />
     <Compile Include="NewsGrabber.cs" />
     <Compile Include="Article.cs" />
