@@ -14,22 +14,21 @@ namespace PjNewsLib
     {
         public Result()
         {
+            Image = new List<string>();
+            ImageSource = new List<string>();
+            ImageAlt = new List<string>();
         }
+        [JsonProperty("image")]
+        public List<string> Image { get; set; }
 
-        [JsonProperty("header_img/_alt")]
-        public string HeaderImgAlt { get; set; }
-
-        [JsonProperty("header_img")]
-        public string HeaderImg { get; set; }
-
-        [JsonProperty("header_img/_source")]
-        public string HeaderImgSource { get; set; }
+        [JsonProperty("image/_source")]
+        public List<string> ImageSource { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }
 
-        //[JsonProperty("content")]
-        //public IList<string> Content { get; set; }
+        [JsonProperty("image/_alt")]
+        public List<string> ImageAlt { get; set; }
 
         [JsonProperty("content")]
         public string Content { get; set; }
@@ -108,27 +107,29 @@ namespace PjNewsLib
 
         }
 
-        public async Task<BitmapImage> GetHeaderImage()
-        {
-            var httpClient = new HttpClient();
-            var contentBytes = await httpClient.GetByteArrayAsync(Results.First().HeaderImg);
-            var ims = new InMemoryRandomAccessStream();
-            var dataWriter = new DataWriter(ims);
-            dataWriter.WriteBytes(contentBytes);
-            await dataWriter.StoreAsync();
-            ims.Seek(0);
+        //public async Task<BitmapImage> GetHeaderImage()
+        //{
+        //    var httpClient = new HttpClient();
+        //    var contentBytes = await httpClient.GetByteArrayAsync(Results.First().HeaderImg);
 
-            var bitmap = new BitmapImage();
-            bitmap.SetSource(ims);
 
-            GetHeaderImageUrl();
+        //    var ims = new InMemoryRandomAccessStream();
+        //    var dataWriter = new DataWriter(ims);
+        //    dataWriter.WriteBytes(contentBytes);
+        //    await dataWriter.StoreAsync();
+        //    ims.Seek(0);
 
-            return bitmap;
-        }
-        public string GetHeaderImageUrl()
-        {
-            return Results.First().HeaderImg;
-        }
+        //    var bitmap = new BitmapImage();
+        //    bitmap.SetSource(ims);
+
+        //    GetHeaderImageUrl();
+
+        //    return bitmap;
+        //}
+        //public string GetHeaderImageUrl()
+        //{
+        //    return Results.First().HeaderImg;
+        //}
 
 
         #endregion

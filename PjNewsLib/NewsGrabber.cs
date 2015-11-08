@@ -56,7 +56,7 @@ namespace PjNewsLib
             var payload = httpClient.GetStringAsync(requestUri).Result;
 
             var sampleResponse = JsonConvert.DeserializeObject<ArticleAlternative>(payload,
-                new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto });
+                new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Arrays});
 
 
             //var sampleResponse = JsonConvert.DeserializeObject<ArticleAlternative>(payload);
