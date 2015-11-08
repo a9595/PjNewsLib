@@ -14,22 +14,26 @@ namespace PjNewsLib
     {
         public Result()
         {
-            Image = new List<string>();
-            ImageSource = new List<string>();
-            ImageAlt = new List<string>();
+            //TODO:add images support
+            //Image = new List<string>();
+            //ImageSource = new List<string>();
+            //ImageAlt = new List<string>(); 
         }
-        [JsonProperty("image")]
-        public List<string> Image { get; set; }
 
-        [JsonProperty("image/_source")]
-        public List<string> ImageSource { get; set; }
+        //TODO:add images support
+        //[JsonProperty("image/_alt")]
+        //public List<string> ImageAlt { get; set; }
+
+        //[JsonProperty("image")]
+        //public List<string> Image { get; set; }
+
+        //[JsonProperty("image/_source")]
+        //public List<string> ImageSource { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }
 
-        [JsonProperty("image/_alt")]
-        public List<string> ImageAlt { get; set; }
-
+  
         [JsonProperty("content")]
         public string Content { get; set; }
     }
