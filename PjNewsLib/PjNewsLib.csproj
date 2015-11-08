@@ -110,7 +110,6 @@
     <Compile Include="ArticleAlternative.cs" />
     <Compile Include="News.cs" />
     <Compile Include="NewsGrabber.cs" />
-    <Compile Include="Article.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel.cs" />
     <Content Include="Properties\PjNewsLib.rd.xml" />

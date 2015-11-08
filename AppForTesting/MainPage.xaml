@@ -11,17 +11,17 @@
                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <!--OnePage-->
-        <Image x:Name="image" HorizontalAlignment="Left" Source="Assets/Wide310x150Logo.png" Stretch="None"/>
+        <!--<Image x:Name="image" HorizontalAlignment="Left" Source="Assets/Wide310x150Logo.png" Stretch="None"/>
         <TextBlock x:Name="textBlockTitle" TextWrapping="Wrap" Text="Title" FontFamily="Impact" FontSize="40.333" Margin="0,20,0,0"/>
         <TextBlock x:Name="textBlockContent" TextWrapping="Wrap" Text="Content" Margin="0,10,0,0"/>
         <TextBlock x:Name="textBlockLinks" TextWrapping="Wrap" Text="links" Margin="0,30,0,0"/>
-        <TextBlock x:Name="textBlockViewModel" TextWrapping="Wrap" Text="links" Margin="0,30,0,0" />
+        <TextBlock x:Name="textBlockViewModel" TextWrapping="Wrap" Text="links" Margin="0,30,0,0" />-->
         
         <!--ViewModel-->
-        <!--<TextBlock x:Name="TextBlockSelectedItem" Text="selected item" />
+        <TextBlock x:Name="TextBlockSelectedItem" Text="selected item" />
         <ListView x:Name="ListViewNews" ItemsSource="{x:Bind ViewModelItem.News.Results}"
                   HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="NewsItemTapped" SelectionChanged="SelectionChanged"
-                  />-->
+                  />
     </StackPanel>
 </ScrollViewer>
 </Page>

@@ -26,16 +26,22 @@ namespace AppForTesting
         public ArticlePage()
         {
             this.InitializeComponent();
+
+          
+
+        
         }
+      
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (e.Parameter is NewsResult)
+            var result = e.Parameter as NewsResult;
+            if (result != null)
             {
 
                 //string url = "https://api.import.io/store/data/40ab96a9-c714-4844-9eb6-20bd86cf8501/_query?input/webpage/url=http://www.pja.edu.pl/aktualnosci/projekt-reconcile&_user=ac4a2596-0302-46ee-a01a-153a5b50f8bf&_apikey=ac4a2596030246eea01a153a5b50f8bf8d83fcfebeb20555e1c978bf8baa34cc8783b48aa9648c98236227aa39e38c716a3280346535778f39005f54d0a00eb45cdf4387ab49e5af783d95afa60b5c37";
 
-                var currentNewsResult = (NewsResult) e.Parameter;
+                var currentNewsResult = result;
                 
                 ArticleAlternative thisArticle = new ArticleAlternative();
                 thisArticle = NewsGrabber.GetAlternativeArticleSimply(currentNewsResult.Link);
@@ -53,5 +59,8 @@ namespace AppForTesting
             base.OnNavigatedTo(e);
 
         }
+         //this.Frame.Navigate(typeof(MainPage));
+     
+
     }
 }

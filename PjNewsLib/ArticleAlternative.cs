@@ -95,20 +95,17 @@ namespace PjNewsLib
 
         public string GetContent()
         {
-
             //string delimeter = ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,";
             //results.First().content.Aggregate((i, j) => i + delimeter + j);
 
-            var allContent = "";
-            foreach (var str in Results.First().Content)
-            {
-                allContent = allContent + str + "\n";
-            }
+            //var allContent = "";
+            //foreach (var str in Results.First().Content)
+            //{
+            //    allContent = allContent + str;
+            //}
 
-            return allContent;
-
-
-
+            var content = Results.First().Content;
+            return content ?? "no content";
         }
 
         //public async Task<BitmapImage> GetHeaderImage()
